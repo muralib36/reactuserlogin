@@ -27,11 +27,12 @@ export default function Login() {
         />
         <label>Password:</label>
         <input
-          type="text"
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <input type="submit" value="Login"/>
+        {/* <input type="submit" value="Login"/> */}
+        <button type="submit" disabled={!validateForm()}>Login</button>
       </form>
     </div>
   );
